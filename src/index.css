@@ -1,0 +1,104 @@
+@font-face {
+  font-family: poppins;
+  src: url(./font/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: monstera;
+  src: url(/font/Montserrat-VariableFont_wght.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+body {
+  background-color: rgb(48, 54, 59);
+  color: rgb(236, 234, 234);
+}
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+.starter-cont {
+  width: 600px;
+  height: 500px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.starter-cont img {
+  width: 65px;
+  height: 65px;
+}
+.starter-cont h2 {
+  font-size: 21px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.rules-cont {
+  width: 100%;
+  height: 200px;
+  padding: 8px;
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+.rules {
+  width: 60%;
+  height: 100%;
+}
+.rules h3 {
+  font-family: monstera;
+  font-size: 14px;
+  padding-block: 5px;
+}
+.rules p {
+  font-family: monstera;
+  font-size: 12px;
+  padding-block: 4px;
+}
+.btn-start {
+  width: 190px;
+  padding: 5px 0;
+  font-size: 13px;
+  border: 1px solid rgb(48, 54, 59);
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: rgb(57, 64, 69);
+  color: rgb(236, 234, 234);
+  transition: 0.2s ease;
+}
+.btn-start:hover {
+  background-color: rgb(67, 71, 75);
+}
+.luck {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.luck p {
+  font-size: 22px;
+  font-family: monstera;
+  transform: rotate(-35deg);
+  font-weight: 600;
+}
+.exam-wrapper {
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(48, 49, 57);
+}
