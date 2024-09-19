@@ -22,7 +22,7 @@ const Exam = () => {
 
       <div className="exam">
         <div className="status">
-          <progress max={17} value={index + 1} />
+          <progress max={17} value={index} />
           <section className="stastics">
             <span>
               Question <strong>{index + 1}</strong> / {numofQuestions}

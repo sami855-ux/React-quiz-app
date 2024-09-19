@@ -106,11 +106,11 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.exam-wrapper img {
+.exam-wrapper > img {
   width: 55px;
   height: 55px;
 }
-.exam-wrapper h1 {
+.exam-wrapper > h1 {
   margin-top: 15px;
   font-size: 25px;
   font-weight: 600;
@@ -227,4 +227,37 @@ progress {
 }
 .option:disabled {
   pointer-events: none;
+}
+.finish-text {
+  width: 80%;
+  height: 50px;
+  text-align: center;
+  background-color: rgb(36, 137, 251);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  font-size: 14px;
+  font-family: monstera;
+  font-weight: 600;
+  margin-block: 15px;
+}
+.finish-text b {
+  padding-inline: 5px;
+}
+.btn-restart {
+  width: 150px;
+  height: 33px;
+  background-color: rgb(55, 61, 66);
+  border: 2px solid rgb(55, 61, 66);
+  border-radius: 12px;
+  color: rgb(236, 234, 234);
+  font-size: 13px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-right: 60px;
+  margin-top: 25px;
+}
+.btn-restart:hover {
+  border-color: rgb(76, 81, 87);
 }

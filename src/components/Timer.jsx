@@ -4,9 +4,9 @@ import { useData } from "../Context/DataProvider"
 const Timer = () => {
   const { timeRemaining, dispatch } = useData()
 
-  if (timeRemaining === 0) {
-    dispatch({ type: "finish" })
-  }
+  const min = Math.floor(timeRemaining / 60)
+  const sec = timeRemaining % 60
+
   useEffect(() => {
     const id = setInterval(() => {
       dispatch({ type: "tick" })
@@ -16,7 +16,9 @@ const Timer = () => {
   }, [dispatch])
   return (
     <div className="timer">
-      <span>{timeRemaining}</span>
+      <span>
+        {`${min}`.padStart(2, 0)}: {`${sec}`.padStart(2, 0)}
+      </span>
     </div>
   )
 }

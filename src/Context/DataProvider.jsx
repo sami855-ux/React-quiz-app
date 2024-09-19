@@ -8,10 +8,10 @@ const DataContext = createContext()
 const initialState = {
   questions: questionData,
   status: "ready",
-  index: 15,
+  index: 0,
   answer: null,
   examPoints: 0,
-  timeRemaining: 20,
+  timeRemaining: 600,
 }
 
 const reducer = (state, action) => {
@@ -43,11 +43,16 @@ const reducer = (state, action) => {
       return {
         ...state,
         timeRemaining: state.timeRemaining - 1,
+        status: state.timeRemaining === 0 ? "finish" : state.status,
       }
     case "finish":
       return {
         ...state,
         status: "finish",
+      }
+    case "restart":
+      return {
+        ...initialState,
       }
     default:
       throw new Error("unknown action is applied")

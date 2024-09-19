@@ -1,5 +1,6 @@
 import { useData } from "./Context/DataProvider"
 import Exam from "./components/Exam"
+import Finish from "./components/Finish"
 import Starter from "./components/Starter"
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
     <div className="main-wrapper">
       {status === "ready" && <Starter />}
       {status === "active" && <Exam />}
-      {status === "finish" && <p>Samuel Tale</p>}
+      {status === "finish" && <Finish />}
     </div>
   )
 }
