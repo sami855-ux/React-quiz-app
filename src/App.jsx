@@ -8,6 +8,7 @@ const App = () => {
     <div className="main-wrapper">
       {status === "ready" && <Starter />}
       {status === "active" && <Exam />}
+      {status === "finish" && <p>Samuel Tale</p>}
     </div>
   )
 }
