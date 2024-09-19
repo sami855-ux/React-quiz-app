@@ -4,18 +4,21 @@ const questions = [
     options: ["Angular", "React", "Svelte", "Vue"],
     correctOption: 1,
     points: 10,
+    diffculty: "easy",
   },
   {
     question: "Which company invented React?",
     options: ["Google", "Apple", "Netflix", "Facebook"],
     correctOption: 3,
     points: 10,
+    diffculty: "easy",
   },
   {
     question: "What's the fundamental building block of React apps?",
     options: ["Components", "Blocks", "Elements", "Effects"],
     correctOption: 0,
     points: 10,
+    diffculty: "easy",
   },
   {
     question:
@@ -23,6 +26,7 @@ const questions = [
     options: ["FBJ", "Babel", "JSX", "ES2015"],
     correctOption: 2,
     points: 10,
+    diffculty: "easy",
   },
   {
     question: "How does data flow naturally in React apps?",
@@ -34,12 +38,14 @@ const questions = [
     ],
     correctOption: 0,
     points: 10,
+    diffculty: "intermidate",
   },
   {
     question: "How to pass data into a child component?",
     options: ["State", "Props", "PropTypes", "Parameters"],
     correctOption: 1,
     points: 10,
+    diffculty: "intermidate",
   },
   {
     question: "When to use derived state?",
@@ -51,6 +57,7 @@ const questions = [
     ],
     correctOption: 3,
     points: 30,
+    diffculty: "intermidate",
   },
   {
     question: "What triggers a UI re-render in React?",
@@ -62,6 +69,7 @@ const questions = [
     ],
     correctOption: 2,
     points: 20,
+    diffculty: "intermidate",
   },
   {
     question: 'When do we directly "touch" the DOM in React?',
@@ -73,6 +81,7 @@ const questions = [
     ],
     correctOption: 3,
     points: 20,
+    diffculty: "advanced",
   },
   {
     question: "In what situation do we use a callback to update state?",
@@ -84,6 +93,7 @@ const questions = [
     ],
     correctOption: 3,
     points: 30,
+    diffculty: "advanced",
   },
   {
     question:
@@ -96,6 +106,7 @@ const questions = [
     ],
     correctOption: 2,
     points: 30,
+    diffculty: "advanced",
   },
   {
     question:
@@ -103,6 +114,7 @@ const questions = [
     options: ["useState", "useEffect", "useRef", "useReducer"],
     correctOption: 1,
     points: 10,
+    diffculty: "advanced",
   },
   {
     question: "Which variables should go into the useEffect dependency array?",
@@ -114,6 +126,7 @@ const questions = [
     ],
     correctOption: 2,
     points: 30,
+    diffculty: "easy",
   },
   {
     question:
@@ -121,6 +134,7 @@ const questions = [
     options: ["useState", "useEffect", "useRef", "useReducer"],
     correctOption: 1,
     points: 10,
+    diffculty: "easy",
   },
   {
     question: "An effect will always run on the initial render.",
@@ -132,6 +146,7 @@ const questions = [
     ],
     correctOption: 0,
     points: 30,
+    diffculty: "intermidate",
   },
   {
     question: "An effect will always run on the initial render.",
@@ -143,6 +158,7 @@ const questions = [
     ],
     correctOption: 0,
     points: 30,
+    diffculty: "advanced",
   },
   {
     question: "When will an effect run if it doesn't have a dependency array?",
@@ -154,6 +170,7 @@ const questions = [
     ],
     correctOption: 3,
     points: 20,
+    diffculty: "easy",
   },
   {
     question: "When will an effect run if it doesn't have a dependency array?",
@@ -165,6 +182,7 @@ const questions = [
     ],
     correctOption: 3,
     points: 20,
+    diffculty: "intermidate",
   },
 ]
 

@@ -12,14 +12,29 @@ const initialState = {
   answer: null,
   examPoints: 0,
   timeRemaining: 600,
+  diffculty: "none",
+  length: questionData.length,
 }
 
 const reducer = (state, action) => {
+  let filteredQuestions
   switch (action.type) {
     case "quiz/start":
+      if (state.diffculty === "none") {
+        filteredQuestions = state.questions
+      } else {
+        filteredQuestions = state.questions.filter(
+          (question) => question.diffculty === state.diffculty
+        )
+      }
+      if (state.length !== state.questions.length) {
+        filteredQuestions = filteredQuestions.slice(0, state.length)
+      }
+
       return {
         ...state,
         status: "active",
+        questions: filteredQuestions,
       }
     case "nextQuestion":
       return {
@@ -54,6 +69,16 @@ const reducer = (state, action) => {
       return {
         ...initialState,
       }
+    case "diffculty":
+      return {
+        ...state,
+        diffculty: action.payload,
+      }
+    case "length":
+      return {
+        ...state,
+        length: action.payload,
+      }
     default:
       throw new Error("unknown action is applied")
   }
@@ -61,7 +86,16 @@ const reducer = (state, action) => {
 
 const DataProvider = ({ children }) => {
   const [
-    { questions, status, index, answer, examPoints, timeRemaining },
+    {
+      questions,
+      status,
+      index,
+      answer,
+      examPoints,
+      timeRemaining,
+      diffculty,
+      length,
+    },
     dispatch,
   ] = useReducer(reducer, initialState)
 
@@ -85,6 +119,8 @@ const DataProvider = ({ children }) => {
     index,
     examPoints,
     timeRemaining,
+    diffculty,
+    length,
   }
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>
