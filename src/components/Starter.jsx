@@ -6,6 +6,7 @@ const Starter = () => {
   return (
     <div className="starter-cont">
       <img src="public/vite.svg" alt="" />
+      <h1>React Fundamental Quiz</h1>
       <h2>Test your React Knowledege by taking this simple quiz</h2>
       <section className="rules-cont">
         <div className="rules">
